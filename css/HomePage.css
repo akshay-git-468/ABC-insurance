@@ -103,6 +103,21 @@ section:nth-child(even){
     color: var(--green);
 }
 
+.header .navbar .nav_list{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    background: #eee;
+    color: #fff
+    transition: .5s;
+}
+
 .header .navbar a{
     font-size: 1.7rem;
     color: var(--light-color);
@@ -122,17 +137,28 @@ section:nth-child(even){
  color: blue;
 }
 
-.header .navbar a:hover{
-    color: var(--green);
-}
 
-#menu-btn{
+
+/* #menu-btn{
     font-size: 2.5rem;
     border-radius: .5rem;
     background: #eee;
     color:var(--green);
     padding: 1rem 1.5rem;
     cursor: pointer;
+    display: none;
+} */
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
     display: none;
 }
 
@@ -328,12 +354,51 @@ section:nth-child(even){
 
 @media (max-width:768px){
 
-    #menu-btn{
-        display: initial;
+    .checkbtn{
+        display: block;
     }
 
-    .header .navbar{
-        position: absolute;
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 110px;
+        left: -100%;
+        text-align: center;
+        
+        transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        padding:30px; 
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#0082e6 ;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    /* #menu-btn{
+        display: block;
+    } */
+
+   /* nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #eee;
+        display: block; */
+    }
+
+    /* .header .navbar{
+        position: fixed;
         top:115%; right: 2rem;
         border-radius: .5rem;
         box-shadow: var(--box-shadow);
@@ -344,19 +409,21 @@ section:nth-child(even){
         opacity: 0;
         transform-origin: top right;
         transition: none;
-    }
+    } */
 
-    .header .navbar.active{
+    /* .header .navbar.active{
         transform: scale(1);
         opacity: 1;
         transition: .2s ease-out;
-    }
+    } */
 
-    .header .navbar a{
+    /* .header .navbar a{
         font-size: 2rem;
         display: block;
         margin:2.5rem;
-    }
+    } */
+
+    
 
 }
 
