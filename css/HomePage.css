@@ -137,23 +137,11 @@ nav ul li a:hover{
  color: blue;
 }
 
-
-
-/* #menu-btn{
-    font-size: 2.5rem;
-    border-radius: .5rem;
-    background: #eee;
-    color:var(--green);
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    display: none;
-} */
-
 .checkbtn{
     font-size: 30px;
     float: right;
     line-height: 80px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
     display: none;
 }
@@ -327,14 +315,6 @@ nav ul li a:hover{
 
 
 
-
-
-
-
-
-
-
-
 /* media queries  */
 @media (max-width:991px){
 
@@ -385,45 +365,7 @@ nav ul li a:hover{
         left:0;
     }
 
-    /* #menu-btn{
-        display: block;
-    } */
-
-   /* nav ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #eee;
-        display: block; */
-    }
-
-    /* .header .navbar{
-        position: fixed;
-        top:115%; right: 2rem;
-        border-radius: .5rem;
-        box-shadow: var(--box-shadow);
-        width: 30rem;
-        border: var(--border);
-        background: #fff;
-        transform: scale(0);
-        opacity: 0;
-        transform-origin: top right;
-        transition: none;
-    } */
-
-    /* .header .navbar.active{
-        transform: scale(1);
-        opacity: 1;
-        transition: .2s ease-out;
-    } */
-
-    /* .header .navbar a{
-        font-size: 2rem;
-        display: block;
-        margin:2.5rem;
-    } */
-
-    
+       
 
 }
 
