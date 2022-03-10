@@ -13,6 +13,53 @@
     <link rel="stylesheet" href="css/RegistrationStyle.css" />
   </head>
   <body>
+    <script>  
+      function validateform(){  
+      var name=document.registration.name.value;  
+      var email=document.registration.email.value;  
+      var phoneNumber=document.registration.phoneNumber.value;  
+      var gender=document.registration.gender.value;  
+      var language=document.registration.language.value;  
+      var zipcode=document.registration.zipcode.value;  
+      var password=document.registration.password.value;  
+        
+      if (name==null || name==""){  
+        alert("Name can't be blank");  
+        return false;  
+      }
+      else if (email==null || email==""){  
+        alert("Email can't be blank");  
+        return false;  
+      }
+      else if(password.length<6){  
+        alert("Password must be at least 6 characters long.");  
+        return false;  
+        }
+      else if (phoneNumber.length<10){  
+        alert("phone number must be of 10 digits");  
+        return false;  
+      }  
+      else if (gender==null || gender==""){  
+        alert("Please select a gender");  
+        return false;  
+      } 
+      else if (language==null || language==""){  
+        alert("Please select a language");  
+        return false;  
+      }
+      else if (zipcode.length<6){  
+        alert("zipcode must be of 6 digits");  
+        return false;  
+      }
+      } 
+      
+      </script>  
+
+
+
+
+
+
     <header class="header">
       <a href="#" class="logo">
         <i class="fas fa-viruses"></i>ABC Insurance Company
@@ -21,7 +68,7 @@
 
     <div class="container">
       <h1>Registration Form</h1>
-      <form name="registration" class="registartion-form">
+      <form name="registration" method="get" action="registersuccess.html" onsubmit=" return validateform()" class="registartion-form">
         <table>
           <tr>
             <td><label for="name">Name:</label></td>

@@ -10,6 +10,23 @@
     <title>Login Form Using HTML And CSS Only</title>
   </head>
   <body>
+    <script>  
+      function validateform(){  
+      var email=document.myform.email.value;  
+      var password=document.myform.password.value;  
+        
+      if (email==null || email==""){  
+        alert("Email can't be blank");  
+        return false;  
+      }else if(password.length<6){  
+        alert("Password must be at least 6 characters long.");  
+        return false;  
+        }  
+      }  
+      </script>  
+
+
+
     <header class="header">
 
         <a href="#" class="logo"><i class="fas fa-viruses"></i>ABC Insurance Company </a>
@@ -18,7 +35,7 @@
 
     <div class="container" id="container">
       <div class="form-container log-in-container">
-        <form action="#">
+        <form name="myform" method="get" action="welcome.html" onsubmit=" return validateform()">
           <h1>Login</h1>
           <div class="social-container">
             <a href="#" class="social"
@@ -27,8 +44,8 @@
             <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
           </div>
           <span>or use your account</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
           <a href="#">Forgot your password?</a>
           <button>Log In</button>
           <p class="message">
